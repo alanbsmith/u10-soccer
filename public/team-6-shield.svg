@@ -1,0 +1,9 @@
+<svg width="600" height="600" viewBox="0 0 600 600" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="team-6-shield">
+<g id="team-6-shield_2">
+<path id="shield" d="M84 345.309C84 455.342 286.576 570 300 570C313.424 570 516 455.342 516 345.309V75.0903L300 30L84 75.0903V345.309Z" stroke="white" stroke-width="12" stroke-linejoin="round"/>
+<path id="stripe" d="M315.3 207.624C391.641 131.232 459.525 63.3 459.525 63.3L515.997 75.0867L515.997 162.177C515.997 162.177 444.029 234.262 366.71 311.7M284.483 394.05C234.977 443.629 194.102 484.558 183 495.66C155.1 472.8 126.75 444.45 107.85 415.2C120.011 403.039 172.482 350.537 233.329 289.65" stroke="white" stroke-width="12" stroke-linejoin="round"/>
+<path id="star-base" d="M300 160L326.738 253.689L421.244 230L353.475 300L421.244 370L326.738 346.311L300 440L273.262 346.311L178.756 370L246.525 300L178.756 230L273.262 253.689L300 160Z" stroke="white" stroke-width="12" stroke-linejoin="round"/>
+</g>
+</g>
+</svg>

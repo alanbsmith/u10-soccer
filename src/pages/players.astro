@@ -1,0 +1,45 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Nav from "../components/Nav.astro";
+import PlayerCard from "../components/PlayerCard.astro";
+import Hero from "../components/Hero.astro";
+
+const players = [
+  { number: "00", firstName: "Cameron", lastName: "Jagher" },
+  { number: "01", firstName: "Parker", lastName: "Case" },
+  { number: "02", firstName: "Caden", lastName: "Baesler" },
+  { number: "03", firstName: "Garrett", lastName: "Turpin" },
+  { number: "04", firstName: "Jimmy", lastName: "Gibson" },
+  { number: "05", firstName: "Logan", lastName: "Elsener" },
+  { number: "06", firstName: "Nathaniel", lastName: "Dolan" },
+  { number: "07", firstName: "Jaden", lastName: "Larson" },
+  { number: "08", firstName: "Eli", lastName: "Humphries" },
+  { number: "09", firstName: "Henry", lastName: "Gugler" },
+  { number: "10", firstName: "Henry", lastName: "Smith" },
+  { number: "12", firstName: "Thomas", lastName: "Kramer" },
+  { number: "13", firstName: "Ethan", lastName: "Morland" },
+  { number: "14", firstName: "Judah", lastName: "Walker" },
+];
+---
+
+<Layout title="U10 Team 6 Players">
+  <Nav />
+  <main>
+    <Hero title="Players" />
+    <section>
+      <ul class="player-card-list">
+        {players.map((player) => <PlayerCard {...player} />)}
+      </ul>
+    </section>
+  </main>
+</Layout>
+
+<style>
+  .player-card-list {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    gap: 0.5rem;
+    margin-bottom: 5rem;
+  }
+</style>
