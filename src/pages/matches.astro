@@ -4,73 +4,85 @@ import Nav from "../components/Nav.astro";
 import Hero from "../components/Hero.astro";
 import MatchCard from "../components/MatchCard.astro";
 
-const teamName = "Team 6";
+const teamName = "Erie Chaos";
 
 const weeks = [
   {
-    date: "Saturday, Sept 07",
+    date: "2024-09-07",
     matches: [
       {
         time: "12:00pm",
-        homeTeam: `${teamName}`,
+        homeTeam: teamName,
         awayTeam: "Team Munoz",
+        homeScore: 6,
+        awayScore: 1,
       },
     ],
   },
   {
-    date: "Saturday, Sept 14",
+    date: "2024-09-14",
     matches: [
       {
         time: "12:00pm",
-        homeTeam: `${teamName}`,
+        homeTeam: teamName,
         awayTeam: "Team Goldstone",
+        homeScore: 0,
+        awayScore: 5,
       }
     ],
   },
   {
-    date: "Saturday, Sept 21",
+    date: "2024-09-21",
     matches: [
       {
         time: "09:00am",
         homeTeam: "Team PRA",
-        awayTeam: `${teamName}`,
+        awayTeam: teamName,
+        homeScore: 2,
+        awayScore: 1,
       },
     ],
   },
   {
-    date: "Saturday, Sept 28",
+    date: "2024-09-28",
     matches: [
       {
         time: "10:00am",
         homeTeam: "Team Mockler",
-        awayTeam: `${teamName}`,
+        awayTeam: teamName,
+        homeScore: 0,
+        awayScore: 0,
       },
     ],
   },
   {
-    date: "Saturday, Oct 05",
+    date: "2024-10-05",
     matches: [
       {
         time: "10:00am",
         homeTeam: "Team Yannett",
-        awayTeam: `${teamName}`,
+        awayTeam: teamName,
+        homeScore: 0,
+        awayScore: 0,
       },
     ],
   },
   {
-    date: "Saturday, Oct 12",
+    date: "2024-10-12",
     matches: [
       {
         time: "12:00pm",
-        homeTeam: `${teamName}`,
+        homeTeam: teamName,
         awayTeam: "Team Gradl",
+        homeScore: 0,
+        awayScore: 0,
       },
     ],
   },
 ];
 ---
 
-<Layout title="U10 Team 6 Matches">
+<Layout title="Erie Chaos SC Matches">
   <Nav />
   <main>
     <Hero title="Matches" />

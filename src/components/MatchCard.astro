@@ -1,8 +1,11 @@
 ---
+import dayjs from 'dayjs';
 interface Match {
   time: string;
   homeTeam: string;
   awayTeam: string;
+  homeScore: number;
+  awayScore: number;
 }
 interface Props {
   date: string;
@@ -10,10 +13,12 @@ interface Props {
 }
 
 const { date, matches } = Astro.props;
+const isPastMatch = dayjs().format('YYYY-MM-DD').localeCompare(date) === 1;
+const cardClassList = isPastMatch ? "match-card is-past-match" : "match-card";
 ---
 
-<li class="match-card">
-  <div class="match-card__date">{date}</div>
+<li class={cardClassList}>
+  <div class="match-card__date">{dayjs(date).format('dddd, MMM DD')}</div>
   {
     matches.map((match) => (
       <>
@@ -23,6 +28,12 @@ const { date, matches } = Astro.props;
           <div class="match-card__vs">vs</div>
           <div class="match-card__team">{match.awayTeam}</div>
         </div>
+        {isPastMatch && (
+          <div class="match-card__teams">
+            <div class="match-card__team">{match.homeScore}</div>
+            <div class="match-card__team">{match.awayScore}</div>
+          </div>
+        )}
       </>
     ))
   }
@@ -36,6 +47,10 @@ const { date, matches } = Astro.props;
     gap: 0.25rem;
     min-height: 6rem;
     padding: 1rem;
+  }
+
+  .is-past-match {
+    opacity: 0.6;
   }
 
   .match-card__date {
